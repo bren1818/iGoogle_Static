@@ -1,0 +1,283 @@
+#content, body{ width: 100% height: 100%; min-width: 480px; margin: 0px; font-family: arial;}
+		
+		#content{ min-width: 480px;  margin: 0 auto;}
+		
+		.gradient{
+			background: #f6f8f9; /* Old browsers */
+			background: -moz-linear-gradient(top,  #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f8f9), color-stop(50%,#e5ebee), color-stop(51%,#d7dee3), color-stop(100%,#f5f7f9)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* IE10+ */
+			background: linear-gradient(to bottom,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 ); /* IE6-9 */
+		}
+		
+		.rounded-corners (@radius: 5px) {
+		  -webkit-border-radius: @radius;
+		  -moz-border-radius: @radius;
+		  -ms-border-radius: @radius;
+		  -o-border-radius: @radius;
+		  border-radius: @radius;
+		}
+
+		.rounded-corners-top (@radius: 5px) {
+			-webkit-border-top-left-radius: @radius;
+			-webkit-border-top-right-radius: @radius;
+			-moz-border-radius-topleft: @radius;
+			-moz-border-radius-topright: @radius;
+			border-top-left-radius: @radius;
+			border-top-right-radius: @radius;
+		}
+		
+		.box-shadow (@x: 0px, @y: 0px, @blur: 3px, @color: #000) {
+			  box-shadow: @arguments;
+			  -moz-box-shadow: @arguments;
+			  -webkit-box-shadow: @arguments;
+		}
+		
+		
+			
+		#sortable > li{
+			.rounded-corners-top;
+			
+			min-height: 300px;
+			margin: 20px;
+			display: block;
+			float: left;
+			border: 1px solid #ccc;
+			background-color: #fff;
+			background-image: none;
+		
+			overflow: hidden;
+			
+			-webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.75);
+			-moz-box-shadow:    7px 7px 5px rgba(50, 50, 50, 0.75);
+			box-shadow:         7px 7px 5px rgba(50, 50, 50, 0.75);
+		}
+	
+		#sortable > li.addColumn{
+			min-height: 30px;
+			clear: both;
+			background-color: transparent;
+			border: none;
+			-webkit-box-shadow: none;
+			-moz-box-shadow:    none;
+			box-shadow:         none;
+		}		
+	
+		#sortable > li > ul{ width: 95%; padding: 0px; margin: 0px; margin-left: 2%; min-height: 300px; background-color: #fff; }
+		
+		#sortable > li > ul > li{
+			padding: 0px;
+			margin: 0px;
+			width: 100%;
+			display: block;
+			min-height: 30px;
+			
+		}
+	
+		div.block{
+			margin: 15px 0px;
+			.rounded-corners-top;
+			display: block;
+			border: 1px solid #ccc;
+			background-color: #fff;
+			min-height: 60px;
+			
+			-webkit-box-shadow: 3px 3px 5px rgba(50, 50, 50, 0.75);
+			-moz-box-shadow:    3px 3px 5px rgba(50, 50, 50, 0.75);
+			box-shadow:         3px 3px 5px rgba(50, 50, 50, 0.75);
+			
+			overflow: hidden;
+			padding-bottom: 20px;
+		}
+	
+		div.block .blocktitle{
+			width: 100%;
+			display: block;
+			cursor: pointer;
+			border: none;
+			border-bottom: 1px solid #ccc;
+			background-color: #fff;
+			clear: both;
+			min-height: 30px;
+			line-height: 30px;
+			
+			.gradient;
+			
+			a{
+				font-weight: bold;
+				width: 90%;
+				margin-left: 5%;
+				text-decoration: none;
+			}
+		}
+		
+		@media all and (min-width: 780px) {
+			#sortable > li{	
+				width: 28%;
+			}
+		}
+	
+		@media all and (max-width: 779px) and (min-width: 601px) {
+			#sortable > li{	
+				width: 40%;
+			}
+		}
+		
+		@media all and (max-width: 600px) and (min-width: 0px) {
+			#sortable > li{
+				width: 80%;
+				min-width: 320px;
+				margin: 20px 5%;
+			}
+		}
+		
+		li.ui-state-default > h4{
+			text-align: center;
+			margin: 5px 0px;
+		}
+		
+		.rssHeader{
+			text-align: center;
+			display: none;
+		}
+			
+		.rssRow > div,
+		.rssRow > p{
+			display: none;
+		}
+		
+		.rssRow h4{ margin: 0px; }
+		
+		.bookmarks li a,
+		.rssRow h4 a{
+			font-size: 12px;
+			line-height: 16px;
+		}
+		
+		a{
+			color: #000 !important;
+		}
+		
+		.bookmarks li a:hover,
+		.pageBody a:hover{
+			color: #00f !important;
+			text-decoration: underline;
+		}
+		
+		.pageBody a:visited{
+			color: #F15626 !important;
+		}
+		
+		.pageBody .blocktitle a:visited{
+			color: #555555 !important;
+		}
+		
+		.itemProperties{ display: none; }
+		
+		
+		#googleSearch{
+			width: 100%;
+			margin: 0 auto;
+			clear: both;
+			overflow: hidden;
+			text-align: center;
+		}
+		
+		#googleSearch form{
+			margin: 0px auto;
+			text-align: left;
+			width: 400px;
+			overflow: hidden;
+			padding: 20px 40px;
+			display: block;
+		}
+		
+		#googleSearch form input[type="text"]{
+			float: left;
+			clear: left;
+			width: 300px;
+			display: block;
+			height: 23px;
+			line-height: 23px;
+			margin-left: 20px;
+		}
+		
+		#googleSearch form input[type="submit"]{
+			float: right;
+			clear: right;
+			width: 60px;
+			height: 30px;
+			
+			display: block;
+			
+		  
+			-webkit-border-radius: 2px;
+			-moz-border-radius: 2px;
+			border-radius: 2px;
+
+			height: 29px;
+			line-height: 29px;
+			
+			padding: 0 8px;
+			text-align: center;
+			text-decoration: none !important;
+			
+			
+			background-color: #4D90FE;
+			background-image: -moz-linear-gradient(center top , #4D90FE, #4787ED);
+			
+			border: 1px solid #3079ED;
+			color: #FFFFFF !important;
+		}
+		
+		#topLinks{
+			text-align: center;
+			width: 100%;
+			background-color: #000;
+			overflow: hidden;
+		}
+		
+		#topLinks ul{
+			margin: 0px; display: block;
+		}
+		
+		#topLinks li{
+			float: left;
+			width: 14%;
+			display: inline-block;
+			color: #fff;			
+		}
+		
+		#topLinks li a{
+			color: #fff !important;
+			font-weight: bold;
+			text-decoration: none;
+			font-size: 12px;
+		}
+		
+		.weatherItem{
+			font-weight: bold;
+			background-position:  right;
+			padding-top: 20px;
+		}
+		
+		.weatherItem > div{ padding-left: 20px; font-size: 14px; font-weight: normal; line-height: 20px; }
+		
+		/*.weatherCity{ display: none; }*/
+		
+		.bookmarks p{
+			padding-left: 10px;
+			margin: 3px 0px;
+			font-weight: bold;
+		}
+		
+		
+		tr.showIfFeed{ display: none; }
+		.showIfFeed tr.showIfFeed{ display: block; }
+		
+		#addModule td{ min-width: 400px; }
+		
+		.clear{ clear: both; }
